@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import images from './data.js'
-import ImageItem from './ImageItem.js'
 import Header from './Header/Header.js'
 import './App.css'
 import ImageList from './ImageList.js'
@@ -20,7 +19,7 @@ export default class App extends Component {
   render() {
     
   // console.log(this.state.keyWord)
-  const filteredImages = images.filter((image)=>{
+  const filteredImages = images.filter( (image) => {
     if(image.keyword === this.state.keyWord){
       return image;
     }else if(this.state.keyWord === ''){
@@ -41,6 +40,7 @@ export default class App extends Component {
           <select value={this.state.keyWord}
           onChange={this.handleCreatureSelect}>
 
+            <option value=''>select one</option>
             <option value="narwhal">Narwhal</option>
             <option value="rhino">Rhino</option>
             <option value="unicorn">Unicorn</option>

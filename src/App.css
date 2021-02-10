@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -68,5 +69,5 @@ form{
   display: block;
 }
 .select-prompt{
-  text-decoration: underline wavy lightgrey;
+  text-decoration: underline rgb(80, 203, 62);
 }
