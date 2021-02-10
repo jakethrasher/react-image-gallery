@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+li{
+  list-style: none;
+}
+img{
+  height: 200px;
+  width: 200px;
+}
+ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin:0 auto;
+}
+form{
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 20px;
+  display: block;
+  width: 100%;
+}
+.image-container{
+  display: block;
+}
+.select-prompt{
+  text-decoration: underline wavy lightgrey;
+}
