@@ -9,24 +9,56 @@ import ImageList from './ImageList.js'
 
 
 export default class App extends Component {
+  state = {
+    keyWord:'',
+  }
+  handleCreatureSelect =(e)=>{
+    this.setState({
+      keyWord:e.target.value
+    })
+  }
   render() {
-
-    // const hornedCreatures = images.map((image)=>(
-    //   <ImageItem src={image.url}/>
-    // ))
-
+    
+  // console.log(this.state.keyWord)
+  const filteredImages = images.filter((image)=>{
+    if(image.keyword === this.state.keyWord){
+      return image;
+    }else if(this.state.keyWord === ''){
+      return images;
+    }
+  })
+  
     return (
 
-      <div>
-        <Header/>
-        <div className="image-container">
+      <div className="main-container">
 
-        <ImageList images={ images } />
+        <Header/>
+
+
+        <form>
+          <p className="select-prompt">Select A Creature</p>
+
+          <select value={this.state.keyWord}
+          onChange={this.handleCreatureSelect}>
+
+            <option value="narwhal">Narwhal</option>
+            <option value="rhino">Rhino</option>
+            <option value="unicorn">Unicorn</option>
+            <option value="unilego">UniLego</option>
+            <option value="markhor">Markhor</option>
+            <option value="mouflon">Mouflon</option>
+            <option value="chameleon">Chameleon</option>
+            <option value="lizard">Lizard</option>
+            <option value="dragon">Dragon</option>
+            <option value="triceratops">Triceratops</option>
+          </select>
+        </form>
+        <div className="image-container">
+        
+        <ImageList images={ filteredImages } />
 
         </div>
       </div>
     )
   }
 }
-
-          

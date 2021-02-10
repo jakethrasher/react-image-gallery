@@ -4,13 +4,13 @@ import ImageItem from './ImageItem'
 export default class ImageList extends Component {
     render() {
 
-        const arr = this.props.images;
+        const creaturesArray = this.props.images;
 
         return (
             <ul>
 
-            { arr.map((image)=>(
-            <ImageItem src={image.url}/>))}
+            { creaturesArray.map((image)=>(
+            <ImageItem key={image.description} src={image.url}/>))}
 
             </ul>
         )
