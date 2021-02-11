@@ -4,7 +4,7 @@
 
 
 .App-logo {
-  height: 40vmin;
+  height: 80px;
   pointer-events: none;
 }
 
@@ -58,16 +58,16 @@ ul{
   width: 85%;
   margin:0 auto;
 }
-form{
-  font-size: 1.3rem;
+.dropdown{
+  font-size: 1.1rem;
   text-align: center;
-  margin: 20px;
-  display: block;
   width: 100%;
 }
 .image-container{
   display: block;
 }
 .select-prompt{
-  text-decoration: underline rgb(80, 203, 62);
+  text-decoration: underline rgb(39, 125, 26);
+  font-size: 1.3rem;
+  margin-bottom: 1px;
 }
